@@ -2,7 +2,7 @@ let modInfo = {
 	name: "The Beetle Tree",
 	author: "average_h_enjoyer",
 	pointsName: "points",
-	modFiles: ["beetle.js"],
+	modFiles: ["layers.js", "tree.js"],
 
 	discordName: "",
 	discordLink: "",
@@ -40,8 +40,9 @@ function canGenPoints(){
 function getPointGen() {
 	if(!canGenPoints())
 		return new Decimal(0)
-
+	
 	let gain = new Decimal(1)
+	if (hasUpgrade('p', 11)) gain = gain.times(2)
 	return gain
 }
 
