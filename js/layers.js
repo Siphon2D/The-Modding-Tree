@@ -32,6 +32,29 @@ addLayer("e", {
            cost: new Decimal(1),
 
         },
+        12: {
+           title: "more eggs = more points",
+           description: "Eggs boost points ",
+           cost: new Decimal(2),
+           effect() {
+              return player[this.layer].points.add(1).pow(0.5)
+           },
+           effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
+        },
+        13: {
+           title: "more points = more egg",
+           description: "Points boost Eggs",
+           cost: new Decimal(5),
+           effect() {
+              return player.points.add(1).pow(0.15)
+           },
+           effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
+           gainMult() {
+           let mult = new Decimal(1)
+           if (hasUpgrade('p', 13)) mult = mult.times(upgradeEffect('p', 13))
+           return mult
+           },
+        },
         
     },
 })
