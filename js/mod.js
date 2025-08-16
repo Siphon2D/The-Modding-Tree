@@ -42,7 +42,8 @@ function getPointGen() {
 		return new Decimal(0)
 	let gain = new Decimal(1)
 	if (hasChallenge("w", 11)) gain = gain.times(challengeCompletions("w", 11))
-	if (inChallenge("w", 11)) gain = gain.times(0.5.pow.challengeCompletions("w", 11)/2)
+	gain = (2).pow.gain
+	if (inChallenge("w", 11)) gain = gain.times(0.5)
 	return gain
 }
 
