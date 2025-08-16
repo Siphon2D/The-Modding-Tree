@@ -2,7 +2,7 @@ let modInfo = {
 	name: "The Beetle Tree",
 	author: "average_h_enjoyer",
 	pointsName: "points",
-	modFiles: ["layers.js", "tree.js"],
+	modFiles: ["eggs.js", "tree.js", "1LI.js"],
 
 	discordName: "",
 	discordLink: "",
