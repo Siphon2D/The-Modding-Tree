@@ -27,9 +27,7 @@ addLayer("e", {
     layerShown(){return true},
      upgrades: {
         11: {
-           title: "The start of all life",
-           description: "Double your point gain.",
-           cost: new Decimal(1),
+         
 
         },
         
