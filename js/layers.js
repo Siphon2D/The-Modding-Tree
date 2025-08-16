@@ -24,5 +24,16 @@ addLayer("w", {
     hotkeys: [
         {key: "w", description: "W: Reset for work", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    layerShown(){return true}
+    
+    layerShown(){return true},
+    challenges: {
+    11: {
+        name: "Push",
+        challengeDescription: "Divide energy gain by 2",
+        canComplete: function() {return player.points.gte(10)},
+        completionLimit: 5,
+        rewardDescription: "Multiply Energy gain by 2^completion level"
+    },
+    etc
+}
 })
