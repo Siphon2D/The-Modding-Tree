@@ -1,6 +1,6 @@
 let modInfo = {
-	name: "The Beetle Tree",
-	author: "average_h_enjoyer",
+	name: "The ??? Tree",
+	author: "nobody",
 	pointsName: "points",
 	modFiles: ["layers.js", "tree.js"],
 
