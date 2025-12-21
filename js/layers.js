@@ -7,7 +7,7 @@ addLayer("w", {
 		points: new Decimal(0),
     }},
     color: "#4BDC13",
-    requires: new Decimal(1000000000), // Can be a function that takes requirement increases into account
+    requires: new Decimal(10), // Can be a function that takes requirement increases into account
     resource: "work", // Name of prestige currency
     baseResource: "energy", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
@@ -32,16 +32,8 @@ addLayer("w", {
         challengeDescription: "Divide energy gain by 2",
         canComplete: function() {return player.points.gte(10)},
         completionLimit: 5,
-        rewardDescription: "+1 Energy gain",
+        rewardDescription: "Multiply Energy gain by 2^completion level",
         goalDescription: "10 points"
-    },
-    12: {
-        name: "Pull",
-        challengeDescription: "Square root energy gain",
-        canComplete: function() {return player.points.gte(50)},
-        completionLimit: 5 ,
-        rewardDescription: "+1 Max completion of push",
-        goalDescription: "50 points"
     },
 }
 })
