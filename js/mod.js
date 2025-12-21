@@ -43,7 +43,6 @@ function getPointGen() {
 	let gain = new Decimal(1)
 	if (hasChallenge("w", 11)) gain = gain.times(challengeCompletions("w", 11))
 	if (inChallenge("w", 11)) gain = gain.times(0.5)
-	if (inChallenge("w", 11)) gain = gain.pow(0.5)
 	return gain
 }
 
