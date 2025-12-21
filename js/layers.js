@@ -32,8 +32,8 @@ addLayer("w", {
         challengeDescription: "Divide energy gain by 2",
         canComplete: function() {return player.points.gte(10)},
         completionLimit: 5,
-        rewardDescription: "Multiply Energy gain by 2^completion level",
-        goalDescription: "10 points"
+        rewardDescription: "Multiply Energy gain by 2^completion level"
     },
+    etc
 }
 })
