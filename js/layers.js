@@ -24,5 +24,15 @@ addLayer("o", {
     hotkeys: [
         {key: "o", description: "O: Reset for oiia points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    layerShown(){return true}
+    layerShown(){return true},
+
+upgrades: {
+    11: {
+        title: "O",
+        description: "Double your point gain.",
+        cost: new Decimal(1),
+
+     },
+},
+
 })
